@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubah Sampah Jadi Berkah | Edukasi Daur Ulang &amp; Pengelolaan Sampah</title>
+<meta name="description" content="Platform edukasi interaktif tentang pengelolaan sampah organik dan anorganik, daur ulang, dan peluang usaha ramah lingkungan.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS Animation -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light-mode">
+
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loading-screen">
+  <div class="loader-ring">
+    <i class="fa-solid fa-recycle"></i>
+  </div>
+  <p data-i18n="loading.text">Menyiapkan ide-ide hijau…</p>
+</div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div id="scroll-progress"></div>
+
+<!-- ===== FLOATING DECORATIVE ELEMENTS ===== -->
+<div class="floaties" aria-hidden="true">
+  <span class="floaty f1">🍃</span>
+  <span class="floaty f2">♻️</span>
+  <span class="floaty f3">🌍</span>
+  <span class="floaty f4">✨</span>
+  <span class="floaty f5">💧</span>
+  <span class="floaty f6">🦋</span>
+  <span class="floaty f7">🌳</span>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-ring"><i class="fa-solid fa-recycle"></i></span>
+      <span class="logo-text">Siklus<span>Hijau</span></span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#home" data-i18n="nav.home">Beranda</a>
+      <a href="#about" data-i18n="nav.about">Tentang</a>
+      <a href="#categories" data-i18n="nav.categories">Kategori Sampah</a>
+      <a href="#videos" data-i18n="nav.videos">Video Edukasi</a>
+      <a href="#business" data-i18n="nav.business">Peluang Usaha</a>
+      <a href="#stats" data-i18n="nav.stats">Statistik</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.contact">Kontak</a>
+    </nav>
+
+    <div class="nav-controls">
+      <button id="lang-toggle" class="pill-btn" aria-label="Switch language">
+        <span class="lang-id active">🇮🇩 ID</span>
+        <span class="lang-en">🇺🇸 EN</span>
+      </button>
+      <button id="theme-toggle" class="pill-btn" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button id="music-toggle" class="pill-btn" aria-label="Toggle background music">
+        <i class="fa-solid fa-volume-xmark"></i>
+      </button>
+      <button id="burger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="./assets/audio/the_mountain-inspiring-483307.mp3" type="audio/mpeg">
+</audio>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+      <span class="eyebrow" data-i18n="hero.eyebrow">Ekonomi Sirkular Dimulai dari Dapurmu</span>
+      <h1 data-i18n="hero.title">Mengubah Sampah Menjadi Sumber Daya Bernilai</h1>
+      <p class="hero-sub" data-i18n="hero.subtitle">Pelajari cara mengubah sampah organik dan anorganik menjadi produk bermanfaat yang mendukung kelestarian lingkungan sekaligus membuka peluang ekonomi.</p>
+      <div class="hero-cta">
+        <a href="#categories" class="btn btn-solid" data-i18n="hero.cta1">Jelajahi Sekarang</a>
+        <button class="btn btn-outline" id="hero-ask-ai" data-i18n="hero.cta2">Tanya AI</button>
+      </div>
+      <div class="hero-mini-stats">
+        <div><strong>6</strong><span data-i18n="hero.mini1">Kategori Sampah</span></div>
+        <div><strong>30+</strong><span data-i18n="hero.mini2">Ide Produk</span></div>
+        <div><strong>2</strong><span data-i18n="hero.mini3">Bahasa</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-aos="fade-left" data-aos-duration="900">
+      <!-- Signature element: The Transformation Ring -->
+      <svg viewBox="0 0 420 420" class="transform-ring" role="img" aria-label="Waste to resource transformation ring">
+        <circle cx="210" cy="210" r="150" class="ring-track"/>
+        <circle cx="210" cy="210" r="150" class="ring-progress"/>
+        <g class="ring-node n1"><circle r="30" class="node-bg"/><text x="0" y="8">🍌</text></g>
+        <g class="ring-node n2"><circle r="30" class="node-bg"/><text x="0" y="8">🧴</text></g>
+        <g class="ring-node n3"><circle r="30" class="node-bg"/><text x="0" y="8">📦</text></g>
+        <g class="ring-node n4"><circle r="30" class="node-bg"/><text x="0" y="8">🌾</text></g>
+        <g class="ring-node n5"><circle r="30" class="node-bg"/><text x="0" y="8">🍾</text></g>
+        <g class="ring-node n6"><circle r="30" class="node-bg"/><text x="0" y="8">🥫</text></g>
+        <foreignObject x="130" y="170" width="160" height="80">
+          <div xmlns="http://www.w3.org/1999/xhtml" class="ring-center">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <span data-i18n="hero.ringcenter">Berputar Jadi Berkah</span>
+          </div>
+        </foreignObject>
+      </svg>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section about">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow" data-i18n="about.eyebrow">Kenapa Ini Penting</span>
+    <h2 data-i18n="about.title">Dari Masalah Menjadi Peluang</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-card" data-aos="fade-up" data-aos-delay="0">
+      <i class="fa-solid fa-trash-arrow-up"></i>
+      <h3 data-i18n="about.c1t">Masalah Sampah</h3>
+      <p data-i18n="about.c1d">Volume sampah rumah tangga terus meningkat setiap tahun, sementara kapasitas TPA semakin terbatas dan pengelolaannya belum optimal.</p>
+    </div>
+    <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+      <i class="fa-solid fa-earth-asia"></i>
+      <h3 data-i18n="about.c2t">Dampak Lingkungan</h3>
+      <p data-i18n="about.c2d">Sampah yang tidak dikelola mencemari tanah, air, dan udara, serta berkontribusi pada emisi gas rumah kaca dan perubahan iklim.</p>
+    </div>
+    <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+      <i class="fa-solid fa-recycle"></i>
+      <h3 data-i18n="about.c3t">Pentingnya Daur Ulang</h3>
+      <p data-i18n="about.c3d">Daur ulang mengurangi beban TPA, menghemat sumber daya alam, dan mengubah limbah menjadi produk yang punya nilai jual.</p>
+    </div>
+    <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+      <i class="fa-solid fa-arrows-spin"></i>
+      <h3 data-i18n="about.c4t">Ekonomi Sirkular</h3>
+      <p data-i18n="about.c4d">Konsep di mana sampah tidak lagi menjadi akhir dari siklus, melainkan awal dari siklus baru yang memberi nilai tambah.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WASTE CATEGORIES ===== -->
+<section id="categories" class="section categories">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow" data-i18n="cat.eyebrow">Panduan Praktis</span>
+    <h2 data-i18n="cat.title">Kategori Sampah &amp; Cara Mengolahnya</h2>
+    <p data-i18n="cat.sub">Pilih kategori untuk melihat manfaat, proses produksi, kemasan, dan peluang usahanya.</p>
+  </div>
+
+  <div class="cat-tabs" id="cat-tabs" data-aos="fade-up">
+    <button class="cat-tab active" data-cat="organic"><i class="fa-solid fa-apple-whole"></i> <span data-i18n="cat.tab.organic">Organik Rumah Tangga</span></button>
+    <button class="cat-tab" data-cat="rice"><i class="fa-solid fa-wheat-awn"></i> <span data-i18n="cat.tab.rice">Sekam &amp; Sisa Padi</span></button>
+    <button class="cat-tab" data-cat="plastic"><i class="fa-solid fa-bottle-water"></i> <span data-i18n="cat.tab.plastic">Plastik &amp; Anorganik</span></button>
+    <button class="cat-tab" data-cat="paper"><i class="fa-solid fa-newspaper"></i> <span data-i18n="cat.tab.paper">Kertas</span></button>
+    <button class="cat-tab" data-cat="glass"><i class="fa-solid fa-wine-bottle"></i> <span data-i18n="cat.tab.glass">Kaca</span></button>
+    <button class="cat-tab" data-cat="metal"><i class="fa-solid fa-jar"></i> <span data-i18n="cat.tab.metal">Logam</span></button>
+  </div>
+
+  <div class="cat-panels" id="cat-panels" data-aos="fade-up">
+    <!-- Panels injected by JS from data in translations.js / script.js -->
+  </div>
+</section>
+
+<!-- ===== VIDEO GALLERY ===== -->
+<section id="videos" class="section videos">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow" data-i18n="vid.eyebrow">Belajar Lewat Tutorial</span>
+    <h2 data-i18n="vid.title">Galeri Video Edukasi</h2>
+    <p data-i18n="vid.sub">Cari video tutorial berdasarkan kategori sampah favoritmu.</p>
+  </div>
+
+  <div class="video-controls" data-aos="fade-up">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="video-search" data-i18n-ph="vid.searchph" placeholder="Cari topik, mis. eco enzyme...">
+    </div>
+    <div class="video-filters" id="video-filters">
+      <button class="filter-chip active" data-filter="all" data-i18n="vid.f.all">Semua</button>
+      <button class="filter-chip" data-filter="organic" data-i18n="vid.f.organic">Organik</button>
+      <button class="filter-chip" data-filter="rice" data-i18n="vid.f.rice">Padi</button>
+      <button class="filter-chip" data-filter="plastic" data-i18n="vid.f.plastic">Plastik</button>
+      <button class="filter-chip" data-filter="paper" data-i18n="vid.f.paper">Kertas</button>
+      <button class="filter-chip" data-filter="glass" data-i18n="vid.f.glass">Kaca</button>
+      <button class="filter-chip" data-filter="metal" data-i18n="vid.f.metal">Logam</button>
+    </div>
+  </div>
+
+  <div class="video-grid" id="video-grid"><!-- injected by JS --></div>
+</section>
+
+<!-- ===== BUSINESS OPPORTUNITY ===== -->
+<section id="business" class="section business">
+  <div class="section-head light" data-aos="fade-up">
+    <span class="eyebrow" data-i18n="biz.eyebrow">Dari Limbah Jadi Cuan</span>
+    <h2 data-i18n="biz.title">Peluang Usaha dari Sampah</h2>
+  </div>
+
+  <div class="biz-grid">
+    <div class="biz-card" data-aos="fade-up" data-aos-delay="0">
+      <span class="biz-num">01</span>
+      <h3 data-i18n="biz.c1t">Potensi Keuntungan</h3>
+      <p data-i18n="biz.c1d">Produk seperti eco enzyme, kompos, dan kerajinan daur ulang punya margin tinggi karena bahan baku nyaris tanpa biaya.</p>
+    </div>
+    <div class="biz-card" data-aos="fade-up" data-aos-delay="100">
+      <span class="biz-num">02</span>
+      <h3 data-i18n="biz.c2t">Peluang Pasar</h3>
+      <p data-i18n="biz.c2d">Permintaan produk ramah lingkungan terus tumbuh, dari rumah tangga hingga UMKM dan sektor pertanian.</p>
+    </div>
+    <div class="biz-card" data-aos="fade-up" data-aos-delay="200">
+      <span class="biz-num">03</span>
+      <h3 data-i18n="biz.c3t">Target Pelanggan</h3>
+      <p data-i18n="biz.c3d">Rumah tangga peduli lingkungan, petani organik, kafe &amp; restoran, hingga pengrajin dan sekolah.</p>
+    </div>
+    <div class="biz-card" data-aos="fade-up" data-aos-delay="300">
+      <span class="biz-num">04</span>
+      <h3 data-i18n="biz.c4t">Strategi Pemasaran Digital</h3>
+      <p data-i18n="biz.c4d">Manfaatkan media sosial, marketplace, dan konten edukatif untuk membangun kepercayaan dan komunitas pembeli.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS DASHBOARD ===== -->
+<section id="stats" class="section stats">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow" data-i18n="stats.eyebrow">Gambaran Umum</span>
+    <h2 data-i18n="stats.title">Dashboard Statistik</h2>
+    <p class="note" data-i18n="stats.note">*Data ilustrasi untuk keperluan edukasi</p>
+  </div>
+
+  <div class="stats-counters" data-aos="fade-up">
+    <div class="counter-card">
+      <span class="counter" data-target="1250">0</span><span class="counter-suffix">K</span>
+      <p data-i18n="stats.c1">Ton Sampah Didaur Ulang</p>
+    </div>
+    <div class="counter-card">
+      <span class="counter" data-target="480">0</span><span class="counter-suffix">K</span>
+      <p data-i18n="stats.c2">Ton Reduksi CO₂</p>
+    </div>
+    <div class="counter-card">
+      <span class="counter" data-target="72">0</span><span class="counter-suffix">%</span>
+      <p data-i18n="stats.c3">Rumah Tangga Ikut Program</p>
+    </div>
+    <div class="counter-card">
+      <span class="counter" data-target="15">0</span><span class="counter-suffix">M+</span>
+      <p data-i18n="stats.c4">Manfaat Ekonomi (estimasi)</p>
+    </div>
+  </div>
+
+  <div class="charts-grid" data-aos="fade-up">
+    <div class="chart-card">
+      <h4 data-i18n="stats.chart1">Timbulan Sampah per Kategori</h4>
+      <canvas id="chartWaste"></canvas>
+    </div>
+    <div class="chart-card">
+      <h4 data-i18n="stats.chart2">Persentase Daur Ulang per Tahun</h4>
+      <canvas id="chartRecycle"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section faq">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow" data-i18n="faq.eyebrow">Masih Bingung?</span>
+    <h2 data-i18n="faq.title">Pertanyaan yang Sering Diajukan</h2>
+  </div>
+
+  <div class="faq-list" id="faq-list" data-aos="fade-up"><!-- injected by JS --></div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section contact">
+  <div class="contact-grid">
+    <div class="contact-info" data-aos="fade-right">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Mari Terhubung</span>
+      <h2 data-i18n="contact.title">Punya Pertanyaan atau Ide Kolaborasi?</h2>
+      <p data-i18n="contact.sub">Kirim pesan atau kunjungi kami, mari wujudkan lingkungan yang lebih bersih bersama.</p>
+
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-envelope"></i> hello@siklushijau.id</li>
+        <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="contact.address">Medan, Sumatera Utara, Indonesia</span></li>
+      </ul>
+
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+
+      <div class="map-wrap">
+        <iframe title="map" src="https://www.google.com/maps?q=Medan,+Indonesia&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap" data-aos="fade-left">
+      <form id="contact-form">
+        <label data-i18n="contact.name">Nama</label>
+        <input type="text" required>
+        <label data-i18n="contact.email">Email</label>
+        <input type="email" required>
+        <label data-i18n="contact.message">Pesan</label>
+        <textarea rows="4" required></textarea>
+        <button type="submit" class="btn btn-solid" data-i18n="contact.send">Kirim Pesan</button>
+        <p class="form-note" id="form-note"></p>
+      </form>
+
+      <div class="newsletter">
+        <p data-i18n="contact.newsletter">Dapatkan tips daur ulang mingguan lewat email:</p>
+        <div class="newsletter-row">
+          <input type="email" id="newsletter-email" data-i18n-ph="contact.newsletterph" placeholder="Email kamu">
+          <button id="newsletter-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>&copy; <span id="year"></span> SiklusHijau. <span data-i18n="footer.text">Dibuat dengan 💚 untuk bumi yang lebih baik.</span></p>
+</footer>
+
+<!-- ===== BACK TO TOP ===== -->
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ===== AI ASSISTANT ===== -->
+<button id="ai-fab" aria-label="Ask AI Assistant">
+  <i class="fa-solid fa-robot"></i>
+  <span data-i18n="ai.fab">Tanya AI Assistant</span>
+</button>
+
+<div id="ai-chat" class="ai-chat">
+  <div class="ai-chat-head">
+    <div>
+      <i class="fa-solid fa-leaf"></i>
+      <div>
+        <strong data-i18n="ai.title">Asisten Daur Ulang</strong>
+        <small data-i18n="ai.subtitle">Siap bantu soal sampah &amp; daur ulang</small>
+      </div>
+    </div>
+    <button id="ai-close" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="ai-chat-body" id="ai-chat-body">
+    <div class="ai-msg bot" data-i18n="ai.greeting">Hai! Aku bisa bantu jawab soal pengelolaan sampah, eco enzyme, kompos, daur ulang plastik, sampai peluang usahanya. Tanya apa saja 👇</div>
+    <div class="ai-suggestions" id="ai-suggestions"></div>
+  </div>
+  <form class="ai-chat-input" id="ai-chat-form">
+    <input type="text" id="ai-input" data-i18n-ph="ai.placeholder" placeholder="Tulis pertanyaanmu...">
+    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+</div>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
