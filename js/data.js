@@ -241,19 +241,19 @@ const CATEGORY_DATA = {
 };
 
 const VIDEO_DATA = [
-  { cat: "organic", id: { t: "Membuat Eco Enzyme dari Sisa Dapur" }, en: { t: "Making Eco Enzyme from Kitchen Scraps" }, q: "cara membuat eco enzyme dari sampah dapur" },
-  { cat: "organic", id: { t: "Kompos Rumahan dalam Ember" }, en: { t: "Home Composting in a Bucket" }, q: "cara membuat kompos rumahan sederhana" },
-  { cat: "rice", id: { t: "Arang Sekam untuk Media Tanam" }, en: { t: "Husk Charcoal for Growing Media" }, q: "cara membuat arang sekam untuk media tanam" },
-  { cat: "rice", id: { t: "Olahan Jerami Jadi Pakan Ternak" }, en: { t: "Turning Straw into Livestock Feed" }, q: "cara mengolah jerami jadi pakan ternak" },
-  { cat: "plastic", id: { t: "Botol Plastik Jadi Paving Block" }, en: { t: "Plastic Bottles into Paving Blocks" }, q: "cara membuat paving block dari sampah plastik" },
-  { cat: "plastic", id: { t: "Pirolisis Plastik Jadi Bahan Bakar" }, en: { t: "Plastic Pyrolysis into Fuel" }, q: "pirolisis plastik menjadi bahan bakar tutorial" },
-  { cat: "plastic", id: { t: "Plastik Jadi Solar & Pertamax" }, en: { t: "Plastic into Diesel & Gasoline" }, q: "cara mengubah sampah plastik jadi solar dan pertamax" },
-  { cat: "paper", id: { t: "Membuat Kertas Daur Ulang di Rumah" }, en: { t: "Making Recycled Paper at Home" }, q: "cara membuat kertas daur ulang di rumah" },
-  { cat: "paper", id: { t: "Kardus Bekas Jadi Furnitur Mini" }, en: { t: "Cardboard into Mini Furniture" }, q: "cara membuat furnitur dari kardus bekas" },
-  { cat: "glass", id: { t: "Botol Kaca Jadi Lampu Hias" }, en: { t: "Glass Bottles into Decorative Lamps" }, q: "cara membuat lampu hias dari botol kaca bekas" },
-  { cat: "glass", id: { t: "Memotong Botol Kaca dengan Aman" }, en: { t: "Cutting Glass Bottles Safely" }, q: "cara memotong botol kaca dengan aman tutorial" },
-  { cat: "metal", id: { t: "Kaleng Bekas Jadi Pot Tanaman" }, en: { t: "Used Cans into Planter Pots" }, q: "cara membuat pot tanaman dari kaleng bekas" },
-  { cat: "metal", id: { t: "Kerajinan Tutup Botol Logam" }, en: { t: "Metal Bottle Cap Crafts" }, q: "kerajinan dari tutup botol logam bekas" }
+  { cat: "organic", img: "./assets/images/membuat_Eco_enzyme.png", id: { t: "Membuat Eco Enzyme dari Sisa Dapur" }, en: { t: "Making Eco Enzyme from Kitchen Scraps" }, q: "cara membuat eco enzyme dari sampah dapur" },
+  { cat: "organic", img: "./assets/images/kompos_rumahan.png", id: { t: "Kompos Rumahan dalam Ember" }, en: { t: "Home Composting in a Bucket" }, q: "cara membuat kompos rumahan sederhana" },
+  { cat: "rice", img: "./assets/images/arang_sekam.png", id: { t: "Arang Sekam untuk Media Tanam" }, en: { t: "Husk Charcoal for Growing Media" }, q: "cara membuat arang sekam untuk media tanam" },
+  { cat: "rice", img: "./assets/images/olahan_jerami_pakan ternak.png", id: { t: "Olahan Jerami Jadi Pakan Ternak" }, en: { t: "Turning Straw into Livestock Feed" }, q: "cara mengolah jerami jadi pakan ternak" },
+  { cat: "plastic", img: "./assets/images/botol-plastik_paving-block.png", id: { t: "Botol Plastik Jadi Paving Block" }, en: { t: "Plastic Bottles into Paving Blocks" }, q: "cara membuat paving block dari sampah plastik" },
+  { cat: "plastic", img: "./assets/images/plastik_Bahan_bakar.png", id: { t: "Pirolisis Plastik Jadi Bahan Bakar" }, en: { t: "Plastic Pyrolysis into Fuel" }, q: "pirolisis plastik menjadi bahan bakar tutorial" },
+  { cat: "plastic", img: "./assets/images/plastik_jadi_solar_pertamax.png", id: { t: "Plastik Jadi Solar & Pertamax" }, en: { t: "Plastic into Diesel & Gasoline" }, q: "cara mengubah sampah plastik jadi solar dan pertamax" },
+  { cat: "paper", img: "./assets/images/kertas-daur_ulang.png", id: { t: "Membuat Kertas Daur Ulang di Rumah" }, en: { t: "Making Recycled Paper at Home" }, q: "cara membuat kertas daur ulang di rumah" },
+  { cat: "paper", img: "./assets/images/kardus_funiture.png", id: { t: "Kardus Bekas Jadi Furnitur Mini" }, en: { t: "Cardboard into Mini Furniture" }, q: "cara membuat furnitur dari kardus bekas" },
+  { cat: "glass", img: "./assets/images/botol_lampu_hias.png", id: { t: "Botol Kaca Jadi Lampu Hias" }, en: { t: "Glass Bottles into Decorative Lamps" }, q: "cara membuat lampu hias dari botol kaca bekas" },
+  { cat: "glass", img: "./assets/images/memotong_botol.png", id: { t: "Memotong Botol Kaca dengan Aman" }, en: { t: "Cutting Glass Bottles Safely" }, q: "cara memotong botol kaca dengan aman tutorial" },
+  { cat: "metal", img: "./assets/images/kaleng_pot_tanaman.png", id: { t: "Kaleng Bekas Jadi Pot Tanaman" }, en: { t: "Used Cans into Planter Pots" }, q: "cara membuat pot tanaman dari kaleng bekas" },
+  { cat: "metal", img: "./assets/images/tutup_botol.png", id: { t: "Kerajinan Tutup Botol Logam" }, en: { t: "Metal Bottle Cap Crafts" }, q: "kerajinan dari tutup botol logam bekas" }
 ];
 
 const FAQ_DATA = {

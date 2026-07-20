@@ -342,6 +342,58 @@ body.dark-mode .video-card .tag{ color:#9BE39F; }
 .video-card a{ font-weight:700; color: var(--sky); font-size:.85rem; display:inline-flex; align-items:center; gap:.4rem; margin-top:.6rem; }
 #video-empty{ text-align:center; color:var(--text-soft); grid-column: 1/-1; padding: 2rem; }
 
+
+.video-thumb.has-img {
+  padding: 0;
+  overflow: hidden;
+}
+.video-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+  display: block;
+  transition: transform .25s ease;
+}
+.video-thumb-img:hover {
+  transform: scale(1.05);
+}
+
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  cursor: zoom-out;
+  padding: 24px;
+}
+.img-lightbox.open { display: flex; }
+.img-lightbox img {
+  max-width: 90vw;
+  max-height: 82vh;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.5);
+}
+.img-lightbox-caption {
+  color: #fff;
+  margin-top: 14px;
+  font-size: .95rem;
+  text-align: center;
+}
+.img-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 /* ============================================================
    BUSINESS
    ============================================================ */

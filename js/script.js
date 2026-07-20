@@ -191,11 +191,14 @@
       return;
     }
 
-    videoGrid.innerHTML = items.map(v => {
+  videoGrid.innerHTML = items.map(v => {
       const ytUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(v.q);
+      const thumbInner = v.img
+        ? `<img src="${v.img}" alt="${v[currentLang].t}" class="video-thumb-img" onclick="window.openImageLightbox('${v.img}', '${v[currentLang].t.replace(/'/g, "\\'")}')">`
+        : `<i class="fa-solid ${catThumbIcon[v.cat]}"></i>`;
       return `
         <div class="video-card">
-          <div class="video-thumb"><i class="fa-solid ${catThumbIcon[v.cat]}"></i></div>
+          <div class="video-thumb${v.img ? " has-img" : ""}">${thumbInner}</div>
           <div class="vc-body">
             <span class="tag">${v.cat}</span>
             <h4>${v[currentLang].t}</h4>
@@ -203,7 +206,38 @@
           </div>
         </div>`;
     }).join("");
+  }   // 👈 TAMBAHKAN BARIS INI — penutup function renderVideos()
+
+/* ---------- IMAGE LIGHTBOX ---------- */
+  function ensureLightboxEl(){
+    let el = $("#img-lightbox");
+    if (el) return el;
+    el = document.createElement("div");
+    el.id = "img-lightbox";
+    el.className = "img-lightbox";
+    el.innerHTML = `
+      <span class="img-lightbox-close" aria-label="Close">&times;</span>
+      <img src="" alt="">
+      <p class="img-lightbox-caption"></p>`;
+    document.body.appendChild(el);
+    el.addEventListener("click", (e) => {
+      if (e.target === el || e.target.classList.contains("img-lightbox-close")) {
+        el.classList.remove("open");
+      }
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") el.classList.remove("open");
+    });
+    return el;
   }
+  window.openImageLightbox = function(src, caption){
+    const el = ensureLightboxEl();
+    el.querySelector("img").src = src;
+    el.querySelector("img").alt = caption || "";
+    el.querySelector(".img-lightbox-caption").textContent = caption || "";
+    el.classList.add("open");
+  };
+
   $$(".filter-chip").forEach(chip => {
     chip.addEventListener("click", () => {
       $$(".filter-chip").forEach(c => c.classList.remove("active"));
